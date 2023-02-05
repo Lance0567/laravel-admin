@@ -112,7 +112,8 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-8">
-                    
+
+                </div>
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->
