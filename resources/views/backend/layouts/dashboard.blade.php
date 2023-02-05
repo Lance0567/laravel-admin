@@ -112,6 +112,7 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-md-8">
+                    Welcome to {{auth()->user()->role}} - Dashboard
 
                 </div>
               <!-- /.card-footer -->
