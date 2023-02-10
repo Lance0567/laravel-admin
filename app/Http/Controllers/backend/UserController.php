@@ -4,6 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use DB;
 
 class UserController extends Controller
 {
@@ -14,6 +15,8 @@ class UserController extends Controller
 
     public function AllUser() 
     {
-        return view('backend.user.all-user');
+        $all = DB::table('users')
+                ->get();
+        return view('backend.user.all-user', compact('all'));
     }
 }
