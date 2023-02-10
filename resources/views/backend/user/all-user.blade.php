@@ -19,38 +19,40 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
+                  <th>Serial</th>
+                  <th>Name</th>
+                  <th>Email(s)</th>
+                  <th>Role</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
-                
+
+            @foreach($all as $key=>$row)
                 <tr>
-                  <td>Misc</td>
-                  <td>PSP browser</td>
-                  <td>PSP</td>
-                  <td>-</td>
-                  <td>C</td>
+                    <td>{{ $key+1 }}</td>
+                    <td>{{ $row->name }}</td>
+                    <td>{{$row->email}}</td>
+                    <td>{{$row->role}}</td>
+
+                  </td>
+                    <td>
+                        <a href="{{ URL::to('edit-user/'.$row->id)}}" class="btn btn-primary">Edit User</a>
+                        <a href="{{ URL::to('delete-user/'.$row->id)}}" onclick="return confirm('Are you sure you want to delete this user?');">Delete
+                        </a>
+                    </td>
                 </tr>
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+            @endforeach
+
                 </tbody>
                 <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
+                    <tr>
+                        <th>Serial</th>
+                        <th>Name</th>
+                        <th>Email(s)</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                      </tr>
                 </tfoot>
               </table>
             </div>
