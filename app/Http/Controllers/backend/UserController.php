@@ -12,7 +12,7 @@ class UserController extends Controller
         $this->middleware('auth');
     }
 
-    public function AllUSer() 
+    public function AllUser() 
     {
         return view('backend.user.all-user');
     }
