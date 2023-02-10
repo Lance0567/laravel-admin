@@ -23,4 +23,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // User Mananagement
 
-Route::get('/home', [App\Http\Controllers\backend\UserController::class, 'AllUser'])->name('alluser');
+Route::get('/all-user', [App\Http\Controllers\backend\UserController::class, 'AllUser'])->name('alluser');
