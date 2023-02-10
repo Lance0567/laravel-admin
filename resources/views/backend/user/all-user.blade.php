@@ -38,7 +38,7 @@
                   </td>
                     <td>
                         <a href="{{ URL::to('edit-user/'.$row->id)}}" class="btn btn-primary">Edit User</a>
-                        <a href="{{ URL::to('delete-user/'.$row->id)}}" onclick="return confirm('Are you sure you want to delete this user?');">Delete
+                        <a href="{{ URL::to('delete-user/'.$row->id)}}" class="btn btn-secondary">Delete
                         </a>
                     </td>
                 </tr>

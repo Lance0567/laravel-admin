@@ -15,8 +15,16 @@ class UserController extends Controller
 
     public function AllUser() 
     {
-        $all = DB::table('users')
-                ->get();
+        $all = DB::table('users')->get();
         return view('backend.user.all-user', compact('all'));
     }
+    
+    // AddUser, InsertUser
+
+    public function AddUserIndex()
+    {
+        return view('backend.user.add_user');
+        
+    }
+
 }

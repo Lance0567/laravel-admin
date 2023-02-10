@@ -24,3 +24,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // User Mananagement
 
 Route::get('/all-user', [App\Http\Controllers\backend\UserController::class, 'AllUser'])->name('alluser');
+Route::get('/add-user-index', [App\Http\Controllers\backend\UserController::class, 'AddUserIndex'])->name('AddUserIndex');
+Route::post('/insert-user', [App\Http\Controllers\backend\UserController::class, 'InsertUser'])->name('InsertUser');
