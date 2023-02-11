@@ -34,17 +34,17 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item ">
-            <a href="#" class="nav-link active">
+          <li class="nav-item">
+            <a href="home" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
-                <i class="right fas fa-angle-left"></i>
+                
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            {{-- <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ asset('backend/index.html') }}" class="nav-link">
+                <a href="home" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
@@ -61,7 +61,7 @@
                   <p>Dashboard v3</p>
                 </a>
               </li>
-            </ul>
+            </ul> --}}
           </li>
 
           @if(auth()->user()->role=='Admin')
@@ -145,25 +145,25 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
+                <a href="{{ asset('backend/pages/charts/chartjs.html') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ChartJS</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{{ asset('backend/pages/charts/flot.html') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Flot</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
+                <a href="{{ asset('backend/pages/charts/inline.html') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Inline</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/uplot.html" class="nav-link">
+                <a href="{{ asset('backend/pages/charts/uplot.html') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>uPlot</p>
                 </a>
@@ -289,6 +289,12 @@
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>jsGrid</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="all-user" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>User Tables</p>
                 </a>
               </li>
             </ul>
