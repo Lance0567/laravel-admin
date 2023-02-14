@@ -14,6 +14,6 @@ class ChartController extends Controller
     
     public function ChartJs()
     {
-        return view('backend.layouts.charts');
+        return view('backend.layouts.chartJs');
     }
 }
